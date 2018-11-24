@@ -34,7 +34,7 @@ namespace Kooks.Controls
             }
             else
             {
-                MessageBox.Show("Info");
+                MessageBox.Show("Aplikacja wykonana przez Hannę Maj-Kucharz w lecie roku 2018.");
             }
         }
     }
