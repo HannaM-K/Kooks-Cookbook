@@ -1,4 +1,15 @@
 Kooks/bin
 Kooks/obj
+!Kooks/obj/Debug/App.g.i.cs
+!Kooks/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+!Kooks/obj/Debug/MainWindow.g.i.cs
+!Kooks/obj/Debug/Kooks.csproj.CoreCompileInputs.cache
+!Kooks/obj/Debug/Kooks.csprojAssemblyReference.cache
+!Kooks/obj/Debug/Kooks_MarkupCompile.i.cache
+!Kooks/obj/Debug/Kooks_MarkupCompile.i.lref
+!Kooks/obj/Debug/TempPE
+!Kooks/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+!Kooks/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+!Kooks/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
 packages
 .vs
