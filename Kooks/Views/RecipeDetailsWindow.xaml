@@ -1,0 +1,126 @@
+﻿<Window x:Class="Kooks.Views.RecipeDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kooks.Views"
+        xmlns:controls="clr-namespace:Kooks.Controls"
+        mc:Ignorable="d"  
+    Title="Kooks" Height="643" Width="1038" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Cursor="Hand">
+
+    <Canvas>
+        <Canvas.Background>
+            <ImageBrush ImageSource="C:\Users\Hania\source\repos\Projekt Kooks\Kooks_nowy\Kooks\Images\table.jpg" />
+        </Canvas.Background>
+
+        <controls:MyMenuControl/>
+
+        <StackPanel Height="413" Canvas.Left="20" Canvas.Top="63" Width="142">
+            <Button Name="EditRecipeButton" Content="Edytuj przepis" Style="{StaticResource OtherWindowBtnStyle}" Click="RecipeDetailsWindowButton_Click" />
+            <Rectangle Name="EditRecipeButtonRectangle" Height="40" Margin="0,0,-0.2,0"/>
+            <Button Name="MyRecipesButton" Content="Moje przepisy" Style="{StaticResource OtherWindowBtnStyle}"  Click="RecipeDetailsWindowButton_Click"/>
+            <Rectangle Height="40" Margin="0,0,-0.2,0"/>
+            <Button Name="KooksRecipesButton" Content="Przepisy Kooks" Style="{StaticResource OtherWindowBtnStyle}" Click="RecipeDetailsWindowButton_Click" />
+            <Rectangle Height="40" Margin="0,0,-0.2,0"/>
+            <Button Name="SaveChangesButton" Content="Zapisz zmiany" Style="{StaticResource OtherWindowBtnStyle}" Visibility="Hidden" Click="SaveChangesButton_Click" />
+
+        </StackPanel>
+        <Label/>
+        <Border BorderBrush="#FFE0C3D8" BorderThickness="5" Canvas.Left="174" Canvas.Top="22" >
+
+            <Grid Height="544" Width="821" Canvas.Left="178" Canvas.Top="27" Background="#FFE4E4E4">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="345*"/>
+                    <ColumnDefinition Width="476*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="263*"/>
+                    <RowDefinition Height="281*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="1" Background="#FFC3C3C3">
+
+                    <Label  Content="Składniki:">
+                        <Label.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White"/>
+                                <GradientStop Color="#FFE2C9C9" Offset="0.603"/>
+                            </LinearGradientBrush>
+                        </Label.Background>
+                    </Label>
+                    <TextBox Name="IngredientsTextBox" BorderThickness="0" IsReadOnly="True" Background="#FFD4DEE0" TextWrapping="Wrap"   ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"  Height="233" Foreground="Black" AcceptsReturn="true"/>
+                </StackPanel>
+                <Border BorderBrush="#FFBCBCBC" BorderThickness="5" Grid.Column="0" Margin="50,10,52.8,15.2" >
+
+                    <Canvas >
+                        <Image Name="CategoryImage" Stretch="Fill" Height="229" Width="232" Source="C:\Users\Hania\source\repos\Projekt Kooks\Kooks_nowy\Kooks\Images\wildtextures-seamless-table-cloth-blue.png"/>
+                        <Button Name="AddChangeImageButton" Click="AddChangeImageButton_Click" Style="{StaticResource AddPictureBtnStyle}"  Content="Dodaj / zmień &#xA;zdjęcie"  Canvas.Left="125" Canvas.Top="179" Height="50" Width="107" Visibility="Hidden">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White"/>
+                                    <GradientStop Color="#FFE2C9C9" Offset="0.603"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </Canvas>
+                </Border>
+
+                <StackPanel Grid.Column="1" Grid.Row="1" Background="#FFBEC5C7" >
+
+                    <Label  Content="Opis wykonania:">
+                        <Label.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White"/>
+                                <GradientStop Color="#FFE2C9C9" Offset="0.603"/>
+                            </LinearGradientBrush>
+                        </Label.Background>
+                    </Label>
+                    <TextBox Name="DescriptionTextBox"  BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap"    Foreground="Black" Background="#FFD4DEE0" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="255" AcceptsReturn="true"/>
+                </StackPanel>
+
+
+                <Grid Name="InfoInternalGrid" Grid.Column="0" Margin="0,263,4.8,0" Grid.RowSpan="2"  >
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="97*"/>
+                        <ColumnDefinition Width="248*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label  Content="Nazwa:"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="30"  Width="70" Margin="14,20,12.8,20.4" />
+                    <TextBox Name="NameTextBox" BorderThickness="0" Background="Transparent" IsReadOnly="True"  Grid.Column="1"   Foreground="Black"   HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" />
+                    <Label   Content="Poziom:" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <controls:MyStars x:Name="MyStarsControl" Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                    <controls:MyStarButton x:Name="MyStarButtonControl" Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" />
+                    <Label  Content="Czas:" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                    <controls:MyTimePickerControl x:Name="myTimePickerControl"  Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" />
+
+                    <StackPanel Name="TimeStackPanel" Grid.Column="1" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Label Name="hoursLabel"  Foreground="Black"   HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                         <Label Content="h." Foreground="Black"   HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                        <Label Name="minutesLabel"  Foreground="Black"   HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                        <Label Content="m."  Foreground="Black"   HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                        <Label Name="secondsLabel"   Foreground="Black"   HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                        <Label Content="s."  Foreground="Black"   HorizontalAlignment="Center" VerticalAlignment="Center"  />
+
+                    </StackPanel>
+                    <Label Content="Kategoria:" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                    <TextBlock Name="CategoryTextBlock"  Grid.Column="1" Grid.Row="3"  Foreground="Black"   HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                    <controls:MyCategoryComboBox x:Name="categoryComboBox"  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" />
+
+                </Grid>
+
+            </Grid>
+
+
+        </Border>
+        <Label Style="{StaticResource FooterLabelStyle}" />
+    </Canvas>
+</Window>
+
+

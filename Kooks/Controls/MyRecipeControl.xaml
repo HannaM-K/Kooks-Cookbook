@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Kooks.Controls.MyRecipeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kooks.Controls"
+             mc:Ignorable="d" 
+             FontSize="15" d:DesignWidth="200" Height="250">
+    <Border BorderBrush="Gray" BorderThickness="1">
+        <Border Name="MainBorder" BorderBrush="White" BorderThickness="5">
+            <StackPanel Name="MainStackPanel" MouseEnter="MainStackPanel_MouseEnter" MouseLeave="MainStackPanel_MouseLeave" MouseDown="MainStackPanel_MouseDown">
+                <Border Background="LightGray" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" BorderBrush="#FFBDBDBD" BorderThickness="5">
+                    <Image Name="RecipeImage" Height="140"/>
+                </Border>
+                <Grid Background="#82d655">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <!--bedzie trzeba zrobic tak zeby w miare wielkosci nazwy wydluzala sie cala kontrolka oraz caly rzad w datagridzie kontrolek-->
+                    <Label Name="NameLabel"  Content="Placki ziemniaczane" Grid.Row="0" HorizontalAlignment="Center" />
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" >
+                        <Button Name="Star0" Style="{StaticResource SmallGrayStarButtonStyle}"  />
+                        <Rectangle Width="6"/>
+                        <Button Name="Star1"  Style="{StaticResource SmallGrayStarButtonStyle}" />
+                        <Rectangle Width="6"/>
+                        <Button Name="Star2"  Style="{StaticResource SmallGrayStarButtonStyle}" />
+                        <Rectangle Width="6"/>
+                        <Button Name="Star3" Style="{StaticResource SmallGrayStarButtonStyle}"    />
+                        <Rectangle Width="6"/>
+                        <Button Name="Star4" Style="{StaticResource SmallGrayStarButtonStyle}"  />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+                        <!--tutaj moze zastosuje  ten konwerter-->
+                        <Label Name="HoursLabel"  Content="00" Width="30"/>
+                        <Label  Content="h."/>
+                        <Label Name="MinutesLabel"  Content="00" Width="30"/>
+                        <Label  Content="m."/>
+                        <Label Name="SecondsLabel"  Content="00" Width="30"/>
+                        <Label  Content="s."/>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Border>
+</UserControl>
+<!--Moge tu jak i w innych oknach zrobic zasoby u  gory i tam raz przypisac np grubosc tekstu-->
+
+        

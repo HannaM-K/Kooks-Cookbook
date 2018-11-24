@@ -1,0 +1,28 @@
+﻿<Window x:Class="Kooks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kooks"
+        xmlns:controls="clr-namespace:Kooks.Controls"
+        mc:Ignorable="d"
+        Title="Kooks" Height="643" Width="1038"  ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Cursor="Arrow">
+
+    <Canvas>
+        <Canvas.Background>
+            <ImageBrush ImageSource="C:\Users\Hania\source\repos\Projekt Kooks\Kooks_nowy\Kooks\Images\table.jpg" />
+        </Canvas.Background>
+        <controls:MyMenuControl/>
+        <StackPanel Height="377" Canvas.Left="132" Canvas.Top="134" Width="305">
+            <Button Content="Dodaj przepis" Style="{StaticResource MainWindowBtnStyle}" Click="MainWindowBtn_Click"/>
+            <Rectangle Height="40"/>
+            <Button Content="Moje przepisy" Style="{StaticResource MainWindowBtnStyle}" Click="MainWindowBtn_Click"/>
+            <Rectangle Height="40"/>
+            <Button Content="Przepisy Kooks" Style="{StaticResource MainWindowBtnStyle}" Click="MainWindowBtn_Click" />
+        </StackPanel>
+
+        <Image  Stretch="Fill" Source="C:\Users\Hania\source\repos\Projekt Kooks\Kooks_nowy\Kooks\Icons\icons8-kapelusz-kucharski-80_1_.ico" Canvas.Left="676" Canvas.Top="201" Height="142" Width="147">
+        </Image>
+        <Label Style="{StaticResource FooterLabelStyle}" Canvas.Left="837" Canvas.Top="576"/>
+    </Canvas>
+</Window>

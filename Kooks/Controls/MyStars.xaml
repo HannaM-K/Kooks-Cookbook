@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Kooks.Controls.MyStars"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kooks.Controls"
+             mc:Ignorable="d" >
+    
+    <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" >
+        <Button Name="Star0" Style="{StaticResource GrayStarButtonStyle}"  />
+        <Rectangle Width="6"/>
+        <Button Name="Star1"  Style="{StaticResource GrayStarButtonStyle}" />
+        <Rectangle Width="6"/>
+        <Button Name="Star2"  Style="{StaticResource GrayStarButtonStyle}" />
+        <Rectangle Width="6"/>
+        <Button Name="Star3" Style="{StaticResource GrayStarButtonStyle}"  />
+        <Rectangle Width="6"/>
+        <Button Name="Star4" Style="{StaticResource GrayStarButtonStyle}"  />
+    </StackPanel>
+</UserControl>
