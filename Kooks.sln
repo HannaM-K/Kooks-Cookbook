@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kooks", "Kooks\Kooks.csproj", "{FA6421ED-FC8B-4815-B624-0E50A906DB46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{3474E7D6-4EF1-41ED-A68C-369524C6330B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{FA6421ED-FC8B-4815-B624-0E50A906DB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA6421ED-FC8B-4815-B624-0E50A906DB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA6421ED-FC8B-4815-B624-0E50A906DB46}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3474E7D6-4EF1-41ED-A68C-369524C6330B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3474E7D6-4EF1-41ED-A68C-369524C6330B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3474E7D6-4EF1-41ED-A68C-369524C6330B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3474E7D6-4EF1-41ED-A68C-369524C6330B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
